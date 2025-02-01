@@ -990,8 +990,18 @@ input, select, textarea {
 
 				#thumbnails article .thumbnail img {
 					display: block;
-					width: 100%;
+					width: 100%; /* Ensures the image fills the container width */
+					height: auto; /* Set a consistent height for all images */
+					object-fit: contain; /* Ensures the full image is displayed without cropping */
+					background-color: #f0f0f0; /* Optional: Adds a background color for empty space */
+					border-radius: 10px; /* Optional: Adds rounded corners */
+					box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
 				}
+			
+				/* #thumbnails article .thumbnail img {
+					display: block;
+					width: 100%;
+				} */
 
 				#thumbnails article .thumbnail:before {
 					pointer-events: none;
